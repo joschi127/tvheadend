@@ -296,6 +296,7 @@ channel_set_services_by_list ( channel_t *ch, const char *svcs )
 
   /* Link */
   tmp = strdup(svcs);
+  ret = NULL;
   tok = strtok_r(tmp, ",", &ret);
   while (tok) {
     if ((svc = service_find(tok)))
