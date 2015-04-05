@@ -86,6 +86,7 @@ service_class_channel_set
 
   /* Make new links */
   tmp = strdup(str);
+  sptr = NULL;
   tok = strtok_r(tmp, ",", &sptr);
   while (tok) {
     ch = channel_find(tok);
